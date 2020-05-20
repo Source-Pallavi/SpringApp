@@ -2,8 +2,6 @@ package com.bridagelabz.abc.abc.controller;
 import com.bridagelabz.abc.abc.model.Greeting;
 import com.bridagelabz.abc.abc.model.User;
 import com.bridagelabz.abc.abc.service.IGreetingService;
-import com.bridagelabz.abc.model.User;
-import com.bridagelabz.abc.service.IGreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

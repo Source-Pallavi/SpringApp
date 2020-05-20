@@ -1,19 +1,26 @@
 package com.bridagelabz.abc.abc.service;
 
+import com.bridagelabz.abc.abc.Repository.Repository;
+import com.bridagelabz.abc.abc.model.Greeting;
+import com.bridagelabz.abc.abc.model.User;
+
+import java.util.List;
+import java.util.Optional;
+
 public class ImplimentationOfGreetingService implements IGreetingService {
-    GreetingRepo greetingRepo;
+    Repository greetingRepo;
     @Override
-    public GreetingUser addGreeting(User user) {
-        return greetingRepo.save(new GreetingUser(counter.incrementAndGet(),message));
+    public Greeting addGreeting(User user) {
+        return greetingRepo.save(new Greeting(counter.incrementAndGet(),message));
     }
 
     @Override
-    public Optional<GreetingUser> getGreetingById(long id) {
+    public Optional<Greeting> getGreetingById(long id) {
         return greetingRepo.findById(id);
     }
 
     @Override
-    public List<GreetingUser> getAllGreeting() {
+    public List<Greeting> getAllGreeting() {
         return greetingRepo.findAll();
     }
 
